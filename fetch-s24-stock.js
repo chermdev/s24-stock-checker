@@ -74,7 +74,7 @@ async function fetchStock(modelList) {
 }
 
 async function handleFetchSpecs() {
-    const stockInfo = await fetchStock("SM-S928BZTVLTM")
+    const stockInfo = await fetchStock("SM-S928BZTVLTM,SM-S926BZVMLTM,SM-S921BZYMLTM")
     console.table(stockInfo)
 }
 handleFetchSpecs()
