@@ -5,10 +5,15 @@ Simple script to fetch stock from Samsung S24 Ultra and others
 
 `npm install`
 ## Examples
-### 1. stock status
 
-#### check-stock.ts example
-```typescript
+---
+
+Fetching stock of 4 products:
+* Anti reflecting screen protector
+* Transparent case
+* Samsung S24 Ultra black
+* Samsung S24 Ultra gray
+```typescript filename="check-stock.ts"
 import { fetchStock } from './fetch-stock/fetch-stock.ts'
 import { SamsungSKU } from './fetch-stock/skus.ts'
 
@@ -30,25 +35,11 @@ checkStockFromUrls()
 
 <img src="img/s24-stock-checker-2.png" style="max-width:700px">
 
-### 2. filter status outOfStock
+---
 
-replacing *line 12*
+Applying filter `item.stockStatus !== 'outOfStock'`
 
-*check-stock.ts:12*
-```typescript
-console.table(stock)
-```
-with
-
-*check-stock-filtered.ts:12*
-```typescript
-console.table(stock.filter((item) => (
-  item.stockStatus !== 'outOfStock')
-))
-
-```
-#### check-stock-filtered.ts example
-```typescript
+```typescript filename="check-stock-filtered.ts"
 import { fetchStock } from './fetch-stock/fetch-stock.ts'
 import { SamsungSKU } from './fetch-stock/skus.ts'
 
